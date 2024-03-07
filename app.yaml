@@ -1,4 +1,5 @@
 runtime: python39  # Specify the Python runtime version you're using
+env: flex
 entrypoint: gunicorn -b :$PORT app:main  # Entry point command for running your Flask application
 
 handlers:
