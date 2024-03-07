@@ -1,0 +1,9 @@
+runtime: python39  # Specify the Python runtime version you're using
+entrypoint: gunicorn -b :$PORT app:main  # Entry point command for running your Flask application
+
+handlers:
+- url: /static  # URL path for static files (CSS, JavaScript, images, etc.)
+  static_dir: static  # Directory containing your static files
+
+- url: /.*  # URL path for handling all other requests
+  script: auto  # Use the built-in Flask development server
