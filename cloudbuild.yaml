@@ -1,9 +1,8 @@
----
 steps:
-  - name: gcr.io/cloud-builders/gcloud
-    args:
-      - app
-      - deploy
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['app', 'deploy']
+
 options:
   logging:
-    logsBucket: python_project_03202024
+    # Specify the bucket where build logs will be stored
+    logsBucket: 'python_project_03202024'
