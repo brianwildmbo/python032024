@@ -2,7 +2,3 @@ steps:
   # Install dependencies (if needed)
   - name: 'gcr.io/cloud-builders/pip'
     args: ['install', '-r', 'requirements.txt']
-
-options:
-  logging:
-    logsBucket: 'pythonmbologging'
