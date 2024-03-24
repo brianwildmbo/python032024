@@ -1,12 +1,1 @@
-steps:
-  # Install dependencies (if needed)
-  - name: 'gcr.io/cloud-builders/pip'
-    args: ['install', '-r', 'requirements.txt']
 
-  # Build and deploy the application
-  - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['app', 'deploy']
-
-options:
-  logging:
-    logsBucket: 'python_project_03202024'
